@@ -1,6 +1,5 @@
 package com.hellorudi.listsocialmedia;
 
-import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private String[] dataDescription;
     private TypedArray dataPicture;
     private ArrayList<Social> socials;
-    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         prepare();
         addItem();
-        mContext = getApplicationContext();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
